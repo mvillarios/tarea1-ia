@@ -1,4 +1,4 @@
-Init: A
+Init: B
 Goal: H
 A 10
 B 7

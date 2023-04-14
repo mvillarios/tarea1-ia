@@ -47,5 +47,6 @@ def DFS(init, goal, nodes, graph):
         total_cost += graph[path[i]][path[i+1]]
     return path, total_cost, expand_count
 
-
+# def uniform_cost_search(init, goal, nodes, graph):
+    
 
