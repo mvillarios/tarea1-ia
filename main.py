@@ -9,6 +9,7 @@ def main():
 
     #path, total_cost, expand_count = m.a_estrella(init, goal, nodes, graph)
 
+    path, total_cost, expand_count = m.uniform_cost_search(init, goal, nodes, graph)
     for node in path:
         if node != path[-1]:
             print(node, end=' -> ')

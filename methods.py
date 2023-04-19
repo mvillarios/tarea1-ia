@@ -92,9 +92,32 @@ def DFS(init, goal, nodes, graph):
             
 def uniform_cost_search(init, goal, nodes, graph):
 
-    
+    lista_nodos = [(init, 0, [init])] # Lista de nodos a expandir guarda el nodo inicial con costo 0 y camino vacio
 
+    expand_count = {node: 0 for node in nodes}
 
+    while lista_nodos:
+
+        # Ordena la lista de nodos por costo
+        lista_nodos.sort(key=lambda x: x[1])
+
+        # Obtiene el nodo con menor costo
+        node, costo, camino = lista_nodos.pop(0)
+
+        # Si el nodo es el objetivo, retorna el camino y el costo
+        if node == goal:
+            return camino, costo, expand_count
+
+        for vecino in graph[node]:
+            
+            costo_total = costo + graph[node][vecino]
+            camino_nuevo = camino.copy() + [vecino]
+            nodo_nuevo = (vecino, costo_total, camino_nuevo)
+
+            lista_nodos.append(nodo_nuevo)
+
+        if expand_count[node] == 0:
+            expand_count[node] = 1
 
     return None
 
