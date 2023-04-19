@@ -4,8 +4,10 @@ import methods as m
 def main():
     data = g.load_graph('graph.txt')
     init,goal,nodes,graph = g.create_graph(data)
-    
-    path, total_cost, expand_count = m.DFS(init, goal, nodes, graph)
+
+    #path, total_cost, expand_count = m.DFS(init, goal, nodes, graph)
+
+    path, total_cost, expand_count = m.a_estrella(init, goal, nodes, graph)
 
     for node in path:
         if node != path[-1]:
