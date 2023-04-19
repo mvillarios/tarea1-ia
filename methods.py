@@ -32,8 +32,6 @@ def DFS(init, goal, nodes, graph):
 
             for child in graph[node]:
                 stack.append(child)
-
-# def uniform_cost_search(init, goal, nodes, graph):
     
 
 # def a_estrella(init, goal, nodes, graph):
@@ -92,7 +90,13 @@ def DFS(init, goal, nodes, graph):
             
 
             
+def uniform_cost_search(init, goal, nodes, graph):
 
+    
+
+
+
+    return None
 
 
 
